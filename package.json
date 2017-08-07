@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/fran8narf/chat_node-socketIO#readme",
   "dependencies": {
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "socket.io": "^2.0.3"
   }
 }
