@@ -1,0 +1,25 @@
+{
+  "name": "chat_node_socketio",
+  "version": "1.0.0",
+  "description": "chat made with nodeJS and socketIO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fran8narf/chat_node-socketIO.git"
+  },
+  "keywords": [
+    "nodejs",
+    "socketIO",
+    "express",
+    "nodemon"
+  ],
+  "author": "NarfOner Scofield",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fran8narf/chat_node-socketIO/issues"
+  },
+  "homepage": "https://github.com/fran8narf/chat_node-socketIO#readme"
+}
