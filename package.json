@@ -4,7 +4,7 @@
   "description": "chat made with nodeJS and socketIO",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/index.js",
+  	"start:" "nodemon server/index.js"
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,7 +25,6 @@
   "homepage": "https://github.com/fran8narf/chat_node-socketIO#readme",
   "dependencies": {
     "express": "^4.15.4",
-    "nodemon": "^1.11.0",
     "socket.io": "^2.0.3"
   },
   "devDependencies": {
