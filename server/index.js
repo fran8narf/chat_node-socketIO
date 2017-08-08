@@ -15,11 +15,20 @@ app.get('/', function(req, res){
 	res.status(200).send("Welcome to the nodeJS Server");
 });
 
+var messages = [{
+		id: 1,
+		text: 'Welcome to the chatroom!',
+		nickName: 'ChatBot'
+	}];
+
 //Abrimos la primer conexión al socket
 
 io.on('connection', function(socket){
 	//detectamos cuando alguien se conecta al socket.
-	console.log("The user logged is: "+socket);
+	console.log("The user logged is: "+socket.handshake.address);
+
+	//cuando se conecte el cliente se le emite el mensaje (main.js)
+	socket.emit('messages', messages);
 });
 
 server.listen( 3020, function(){
