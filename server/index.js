@@ -7,6 +7,9 @@ var server = require('http').Server(app); //al método http le decimos que nuest
 
 var io = require('socket.io')(server) //aqui hacemos lo mismo que arriba pero la pasamos la variable server que ya lleva la inicialización de express.
 
+//.use sirve para usar un middleware de express
+app.use(express.static('client')) //todos los html que haya en la carpeta client van a ser los HTML estáticos.
+
 //GET
 app.get('/', function(req, res){
 	res.status(200).send("Welcome to the nodeJS Server");
