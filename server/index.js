@@ -12,6 +12,13 @@ app.get('/', function(req, res){
 	res.status(200).send("Welcome to the nodeJS Server");
 });
 
+//Abrimos la primer conexión al socket
+
+io.on('connection', function(socket){
+	//detectamos cuando alguien se conecta al socket.
+	console.log("The user logged is: "+socket);
+});
+
 server.listen( 3020, function(){
 	console.log("Server is working properly in http:localhost:3020");
 });
