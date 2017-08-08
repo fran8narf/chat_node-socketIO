@@ -29,6 +29,15 @@ io.on('connection', function(socket){
 
 	//cuando se conecte el cliente se le emite el mensaje (main.js)
 	socket.emit('messages', messages);
+
+	//recogemos los mensajes del cliente
+	socket.on('add-message', function(data){
+		messages.push(data); //guardamos para que persistan los mensajes mientras el servidor esté encendido, ya que no almacenamos en BBDD.
+
+		//actualizamos los mensajes en la vista mandando de nuevo el objeto messages
+		io.sockets.emit('messages', messages)
+	});
+
 });
 
 server.listen( 3020, function(){

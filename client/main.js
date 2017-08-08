@@ -18,5 +18,22 @@ function renderMessages(data){
 		`);
 	}).join(' ');
 
-	document.getElementById('messages').innerHTML = html;
+	var divMsgs = document.getElementById('messages');
+	divMsgs.innerHTML = html;
+	divMsgs.scrollTop = divMsgs.scrollHeight;
+}
+
+function addMessage(e){
+	var message = {
+		nickName: document.getElementById('nickname').value,
+		text: document.getElementById('text').value
+	};
+
+	//ocultamos la caja del nick para evitar que se esté cambiando el nick constantemente
+	document.getElementById('nickname').style.display = 'none';
+	document.getElementById('text').value = "";
+
+	socket.emit('add-message', message);
+
+	return false;
 }
